@@ -1,8 +1,12 @@
 import UserList from '../components/UserList';
+import UserForm from '../components/UserForm';
 
 const Home = () => {
     return (
-        <UserList/>
+        <div>
+            <UserForm />
+            <UserList />
+        </div>
     )
 }
 

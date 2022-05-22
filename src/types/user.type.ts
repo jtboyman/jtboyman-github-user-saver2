@@ -1,5 +1,5 @@
 export default interface UserData {
-    created_at: Date,
+    created_at: string,
     followers: number,
     following: number,
     name: string,

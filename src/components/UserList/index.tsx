@@ -20,9 +20,9 @@ const UserList = () => {
         .catch(err => {
             console.log(err.message);
         });
-
+//not returning what we want :(
         return (
-            <div>username: {users[0].name}</div>
+            <div>placeholder</div>
         )
 };
 
