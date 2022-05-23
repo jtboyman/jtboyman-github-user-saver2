@@ -1,29 +1,30 @@
 import db from "../../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import mapAllUsers from "../../utils/user-builder"
 
 //create component
 const UserList = () => {
-    //collection we are referencing
+    
     const colRef = collection(db, 'users');
 
-    //declare users array
-    let users: { [field: string]: any }[] = [];
+    const [users, setUsers] = useState<{[field: string]: any}[]>([]);
 
-    //get collection data
-    getDocs(colRef).then((snapshot) => {
-        
-        snapshot.docs.forEach((doc) => {
-            users.push({ ...doc.data() });
-        })
-        console.log(users);
-        })
-        .catch(err => {
-            console.log(err.message);
-        });
-//not returning what we want :(
-        return (
-            <div>placeholder</div>
-        )
+    useEffect(() =>
+        onSnapshot(colRef, (snapshot) =>
+            setUsers(snapshot.docs.map((doc) => doc.data()))
+        ),
+        []
+    );
+
+
+    //not returning what we want :(
+    return (
+            <div>
+                {mapAllUsers(users)}
+            </div>
+
+    )
 };
 
 export default UserList;
