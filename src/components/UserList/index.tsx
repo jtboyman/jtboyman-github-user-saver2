@@ -12,7 +12,7 @@ const UserList = () => {
 
     useEffect(() =>
         onSnapshot(colRef, (snapshot) =>
-            setUsers(snapshot.docs.map((doc) => doc.data()))
+            setUsers(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         ),
         []
     );
