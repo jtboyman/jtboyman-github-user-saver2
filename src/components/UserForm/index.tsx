@@ -18,6 +18,7 @@ const UserForm = () => {
 
                 <input type="submit" value="Add User"/>
             </form>
+            <p className="validation-message"></p>
         </div>
     )
 }

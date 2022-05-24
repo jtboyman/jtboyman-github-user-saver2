@@ -19,17 +19,30 @@ const UserList = () => {
 
     return (
         <div>
-            {users.map(user => (
-                <div key={user.id}>
-                    <p>username: {user.username}</p>
-                    <p>name: {user.name}</p>
-                    <p>public_repos: {user.public_repos}</p>
-                    <p>public_gists: {user.public_gists}</p>
-                    <p>followers: {user.followers}</p>
-                    <p>following: {user.following}</p>
-                    <p>created_at: {user.created_at}</p>
-                </div>
-            ))}
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Public Repositories</th>
+                        <th>Public Gists</th>
+                        <th>Followers</th>
+                        <th>Following</th>
+                        <th>Date Created</th>
+                    </tr>
+                    {users.map(user => (
+                        <tr key={user.id}>
+                            <td>{user.username}</td>
+                            <td>{user.name}</td>
+                            <td>{user.public_repos}</td>
+                            <td>{user.public_gists}</td>
+                            <td>{user.followers}</td>
+                            <td>{user.following}</td>
+                            <td>{user.created_at}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
 
     )

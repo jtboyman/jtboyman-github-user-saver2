@@ -9,6 +9,9 @@ const addUser = (username: string | { username: string; }) => {
     //reference the form element
     const addUserForm = document.querySelector('.add-user-form') as HTMLFormElement;
 
+    //reference <p> where validation message will go
+    const validationMessage = document.querySelector('.validation-message') as HTMLParagraphElement;
+
     //make api call to github to get info we need
     username = addUserForm.username.value;
 
@@ -27,13 +30,16 @@ const addUser = (username: string | { username: string; }) => {
                 public_repos: data.public_repos,
                 username: data.login
             })
-                //reset form and let user know success or failure
+                //reset form and let user know success
                 .then(() => {
                     addUserForm.reset();
+                    validationMessage.innerHTML = 'User Successfully Added!';
                 })
         })
+        //on failure give failure message
         .catch((error) => {
             console.log(error.message)
+            validationMessage.innerHTML = 'Uh-oh! Something went wrong... Please check your spelling, check your connection, or try again later!';
         });
 
 }
