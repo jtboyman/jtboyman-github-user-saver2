@@ -4,7 +4,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <div>
-      Github User Saver!
+      <h1>Github User Saver!</h1>
       <Home/>
     </div>
     

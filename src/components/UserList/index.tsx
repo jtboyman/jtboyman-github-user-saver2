@@ -1,7 +1,7 @@
 import db from "../../firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 import { useState, useEffect } from "react";
-//import mapAllUsers from "../../utils/user-builder"
+import formatDate from "../../utils/dateFormat"
 
 //create component
 const UserList = () => {
@@ -38,7 +38,7 @@ const UserList = () => {
                             <td>{user.public_gists}</td>
                             <td>{user.followers}</td>
                             <td>{user.following}</td>
-                            <td>{user.created_at}</td>
+                            <td>{formatDate(user.created_at)}</td>
                         </tr>
                     ))}
                 </tbody>
