@@ -32,12 +32,15 @@
 
   TypeScript seemed like it would be a simple transition from vanilla JavaScript, but I found I had a more trouble with it than I thought I would. In `add-user.ts`, I kept running into errors when using `document.querySelector`, which resulted in my learning how to correctly decalre type using the `as` keyword. Similarly, I had trouble once again figuring out the correct syntax for declaring the type of the array of objects fetched from the database. With some research, as well as trial and error, I was able to better get an understanding of what TypeScript required and why. I took for granted the amount of work JavaScript does in inferring types. I better understand the value of TypeScript as a strongly typed language, and how it can ensure correct code and prevent errors. I feel it's especially important when using a database such as Google FireStore where there is not the need for schemas, models, etc.
 
+  A final challenge worth mentioning briefly was figuring out where exactly to start. I set up a repository that I ended up scrapping because I did not take the time I needed to organize before jumping directly into coding. I wanted to quickly get feet wet with the new technologies, and the first repo certainly worked as a good learning experience. However, forgetting the importance of sitting down and starting with a solid plan before jumping in certainly slowed things down in the long run.
+
   ### Roadmap
   In reflection on this project, there are a few features and practices I would have liked to incorporate, and should work continue on this project, I will definitely move forward with:
   - Unit Testing: The importance and value of unit testing should not be overlooked. My next steps would be to better familiarize myself with Jest, so that I can use the limited knowledge I do have to better support future projects with this often overlooked, but incredibly useful practice.
   - Preventing Duplicated Users: Setting up the app to notify users a user has already been saved would create a better user experience. Adding some sort of check into `add-user.ts` would be helpful.
   - Mobile Responsiveness: The app is usable on various screen sizes, but media queries added into the css file could better support users on different platforms.
   - Organization of Added Users: It is a more intuitive user experience if there is a more predictable way users are added to the user list; figuring out a way to get FireStore to organize added data more consistently would be helpful.
+  - GitHub branches/commits: With more ideas on how to structure the app and where to begin, in retrospect I would have liked to make better use of GitHub's branches to add features in a more organized way (e.g. a branch for setting up Firebase, a branch for setting up React components, etc.). Additionally, making more commits along the way would help in both organization and safety. It is also good practice for working with other developers. While descriptive, there definitely could have been more commits.
   
 
   ## Contributors
