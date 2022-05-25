@@ -43,6 +43,7 @@ const addUser = (username: string | { username: string; }) => {
         .catch((error) => {
             console.log(error.message)
             validationMessage.innerHTML = 'Uh-oh! Something went wrong... Please check your spelling, check your connection, or try again later!';
+            validationMessage.style.color = "white";
         });
 
 }
