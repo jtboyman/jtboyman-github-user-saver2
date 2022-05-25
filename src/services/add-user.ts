@@ -1,6 +1,8 @@
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
+//this module is responsible for making the api call to github and adding a new user to firestore
+
 const addUser = (username: string | { username: string; }) => {
 
     //collection we are referencing
@@ -34,6 +36,7 @@ const addUser = (username: string | { username: string; }) => {
                 .then(() => {
                     addUserForm.reset();
                     validationMessage.innerHTML = 'User Successfully Added!';
+                    validationMessage.style.color = "white";
                 })
         })
         //on failure give failure message
