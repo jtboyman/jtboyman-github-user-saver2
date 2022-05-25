@@ -15,11 +15,17 @@
   
 
   ## Installation:
-  In order to run the app, ensure that you have installed node.js on your machine. In the command line, run `npm i` to install the necessary dependencies, then run `npm start` to run the development build of the app.
+  In order to run the app, ensure that you have installed node.js on your machine.
+  - In the command line, run `git clone https://github.com/jtboyman/jtboyman-github-user-saver2.git` to clone the app onto your machine.
+  - In the command line, run `cd github-user-saver2` to navigate to the directory.
+  - In the command line, run `npm i` to install the necessary dependencies.
+  - Run `npm start` to run the development build of the app.
+  - The app will be available at in the browser at http://localhost:3000.
+  - To create a production build, you can use `npm run build`.
 
   ## Usage:
   In order to use GitHub User Saver, simply enter the username of a GitHub user into the search bar and "Add User". The user will be added to the saved list along with their GitHub information. Click on the user's username to visit that user's GitHub profile. 
-    ![alt text](src\assets\app_screenshot.png)
+    ![app screenshot](./src/assets/app_screenshot.png)
 
 
   ## Development
